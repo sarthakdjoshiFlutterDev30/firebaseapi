@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 3000;
 const JWT_SECRET = process.env.JWT_SECRET || 'db9ce127f0826e017282a339f17bd1dd39875824b2b78edd72b33a2ef00e1f02';
 
 // Middleware
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors());
 app.use(express.json());
 

@@ -23,7 +23,6 @@ const PORT = process.env.PORT || 3000;
 const JWT_SECRET = process.env.JWT_SECRET || 'db9ce127f0826e017282a339f17bd1dd39875824b2b78edd72b33a2ef00e1f02';
 
 // Middleware
-app.use(express.json());
 app.use(cors());
 app.use(express.json());
 
@@ -33,6 +32,7 @@ const upload = multer({ storage });
 
 // Signup route
 app.post('/signup', async (req, res) => {
+  console.log('Signup Request Body:', req.body); 
   const { email, password } = req.body;
   if (!email || !password) return res.status(400).json({ error: 'Email and password are required' });
 

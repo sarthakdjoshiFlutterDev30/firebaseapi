@@ -7,7 +7,7 @@ const multer = require('multer');
 const path = require('path');
 const { v1: uuidv1 } = require('uuid');
 
-const serviceAccount = require('./apitest-db8a0-firebase-adminsdk-l09c9-883e6f5b59.json');
+const serviceAccount = JSON.parse(fs.readFileSync('apitest-db8a0-firebase-adminsdk-l09c9-883e6f5b59.json', 'utf8'));
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),

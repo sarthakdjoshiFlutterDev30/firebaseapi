@@ -23,6 +23,8 @@ const JWT_SECRET = process.env.JWT_SECRET || 'db9ce127f0826e017282a339f17bd1dd39
 
 // Middleware
 app.use(bodyParser.json());
+app.use(cors());
+app.use(express.json());
 
 // Multer config
 const storage = multer.memoryStorage();

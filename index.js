@@ -9,7 +9,7 @@ const { v1: uuidv1 } = require('uuid');
 const fs = require('fs');
 
 
-const serviceAccount = JSON.parse(fs.readFileSync('apitest-db8a0-firebase-adminsdk-l09c9-883e6f5b59.json', 'utf8'));
+const serviceAccount = JSON.parse(fs.readFileSync('apitest-db8a0-firebase-adminsdk-l09c9-3b29cfb0e5.json', 'utf8'));
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
